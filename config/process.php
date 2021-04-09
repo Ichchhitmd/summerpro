@@ -1,6 +1,6 @@
 <?php
 
-$mysqli = new mysqli('127.0.0.1:3307','root','','summerpro') or die(mysqli_error($mysqli));
+$mysqli = new mysqli('127.0.0.1:3306','root','','summerpro') or die(mysqli_error($mysqli));
 
 if (isset($POST['save'])){
     $username = $_POST['name'];

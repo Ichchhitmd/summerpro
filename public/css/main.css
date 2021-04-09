@@ -171,11 +171,30 @@ a {
 }
 
 .card-container{
-  display:flex;
-  justify-content: space-between;
-  align-items: normal;
+
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  height: 100%;
 
 }
+
+.card-deck{
+  width: 100% !important;
+  margin: 20px !important;
+  justify-content:start;
+  flex-direction: row wrap !important;
+}
+
+.card{
+  width: 250px !important;
+  height: 400px !important;
+
+}
+
+
 
 .card-image{
   width:250px;

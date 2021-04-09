@@ -29,20 +29,18 @@ Route::get('/terms', function () {
     return view('terms');
 });
 
-Route::get('/products', function () {
-    return view('products');
-});
-Route::get('/pizza', function () {
-    return view('pizza');
-});
+Route::get('/all', [App\Http\Controllers\ItemController::class,'index']);
 
-Route::get('/momo', function () {
-    return view('momo');
-});
+Route::get('/pizza', [App\Http\Controllers\ItemController::class,'pizza']);
 
-Route::get('/sandwich', function () {
-    return view('sandwich');
-});
+
+
+Route::get('/momo', [App\Http\Controllers\ItemController::class,'momo']);
+
+
+Route::get('/sandwich', [App\Http\Controllers\ItemController::class,'sandwich']);
+
+
 
 Route::get('/search', function () {
     return view('search');

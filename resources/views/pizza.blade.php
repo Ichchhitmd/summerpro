@@ -2,7 +2,17 @@
 @section('food')
 <br>
 <div class="card-container">
-    <div class="card">
+
+@foreach($pizzas as $pizza)
+<div class="card">
+        <img src="/img/{{$pizza->file}}" alt="Pizza" class="card-image">
+        <h1>{{$pizza->name}}</h1>
+        <p class="price">{{$pizza->price}}</p>
+        <p>{{$pizza->details}} </p>
+        <p><button>Add to Cart</button></p>
+    </div>
+ @endforeach
+    <!-- <div class="card">
         <img src="/img/neapopiz.jpg" alt="Pizza" class="card-image">
         <h1>Neapolitan Pizza</h1>
         <p class="price">Rs.550</p>
@@ -54,7 +64,7 @@
         <p class="price">Rs.550</p>
         <p>Best pepperoni pizza in town</p>
         <p><button>Add to Cart</button></p>
-    </div>
+    </div> -->
 
 
 
